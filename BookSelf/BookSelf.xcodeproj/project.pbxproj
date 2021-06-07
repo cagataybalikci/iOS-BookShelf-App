@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		51B8F0E5266DFD9600656C67 /* BookShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51B8F0E5266DFD9600656C67 /* BookSelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B8F0E8266DFD9600656C67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51B8F0EA266DFD9600656C67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		51B8F0EC266DFD9600656C67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		51B8F0DC266DFD9600656C67 = {
 			isa = PBXGroup;
 			children = (
-				51B8F0E7266DFD9600656C67 /* BookShelf */,
+				51B8F0E7266DFD9600656C67 /* BookSelf */,
 				51B8F0E6266DFD9600656C67 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 		51B8F0E6266DFD9600656C67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				51B8F0E5266DFD9600656C67 /* BookShelf.app */,
+				51B8F0E5266DFD9600656C67 /* BookSelf.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		51B8F0E7266DFD9600656C67 /* BookShelf */ = {
+		51B8F0E7266DFD9600656C67 /* BookSelf */ = {
 			isa = PBXGroup;
 			children = (
 				51B8F0FF266E037E00656C67 /* BooksTableViewCell.swift */,
@@ -73,15 +73,15 @@
 				51B8F0F1266DFD9600656C67 /* BookSelf.xcdatamodeld */,
 				51C55C39266E3CB10029FE18 /* AddBookViewController.swift */,
 			);
-			path = BookShelf;
+			path = BookSelf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		51B8F0E4266DFD9600656C67 /* BookShelf */ = {
+		51B8F0E4266DFD9600656C67 /* BookSelf */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 51B8F0FC266DFD9900656C67 /* Build configuration list for PBXNativeTarget "BookShelf" */;
+			buildConfigurationList = 51B8F0FC266DFD9900656C67 /* Build configuration list for PBXNativeTarget "BookSelf" */;
 			buildPhases = (
 				51B8F0E1266DFD9600656C67 /* Sources */,
 				51B8F0E2266DFD9600656C67 /* Frameworks */,
@@ -91,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = BookShelf;
+			name = BookSelf;
 			productName = BookSelf;
-			productReference = 51B8F0E5266DFD9600656C67 /* BookShelf.app */;
+			productReference = 51B8F0E5266DFD9600656C67 /* BookSelf.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 51B8F0E0266DFD9600656C67 /* Build configuration list for PBXProject "BookShelf" */;
+			buildConfigurationList = 51B8F0E0266DFD9600656C67 /* Build configuration list for PBXProject "BookSelf" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				51B8F0E4266DFD9600656C67 /* BookShelf */,
+				51B8F0E4266DFD9600656C67 /* BookSelf */,
 			);
 		};
 /* End PBXProject section */
@@ -334,7 +334,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		51B8F0E0266DFD9600656C67 /* Build configuration list for PBXProject "BookShelf" */ = {
+		51B8F0E0266DFD9600656C67 /* Build configuration list for PBXProject "BookSelf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				51B8F0FA266DFD9900656C67 /* Debug */,
@@ -343,7 +343,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		51B8F0FC266DFD9900656C67 /* Build configuration list for PBXNativeTarget "BookShelf" */ = {
+		51B8F0FC266DFD9900656C67 /* Build configuration list for PBXNativeTarget "BookSelf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				51B8F0FD266DFD9900656C67 /* Debug */,
