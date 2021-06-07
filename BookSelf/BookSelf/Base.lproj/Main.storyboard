@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yRS-ec-cJF">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cTP-Yh-RIh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" name="Universal App UI BG Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" rowHeight="120" id="nF5-n6-Bnj" customClass="BooksTableViewCell" customModule="BookSelf" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="120"/>
@@ -27,46 +27,44 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SJR-8n-vte">
-                                                    <rect key="frame" x="16" y="20" width="218" height="80"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ttP-oG-qBH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="0Xe-PW-tDS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Eg2-VF-sGA">
+                                                    <rect key="frame" x="20" y="24.5" width="98" height="71.5"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ttP-oG-qBH">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="100" id="hJF-za-klv"/>
-                                                                <constraint firstAttribute="width" constant="100" id="y2c-4Z-DbE"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Eg2-VF-sGA">
-                                                            <rect key="frame" x="120" y="0.0" width="98" height="80"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTS-jX-ncZ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="98" height="20"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNh-fO-4ci">
-                                                                    <rect key="frame" x="0.0" y="30" width="98" height="20"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jz-9H-T0Z">
-                                                                    <rect key="frame" x="0.0" y="60" width="98" height="20"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTS-jX-ncZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="81.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNh-fO-4ci">
+                                                            <rect key="frame" x="0.0" y="25.5" width="43.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jz-9H-T0Z">
+                                                            <rect key="frame" x="0.0" y="51" width="98" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" name="Universal App UI BG Color"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="SJR-8n-vte" secondAttribute="bottom" constant="20" id="4di-yu-hKh"/>
-                                                <constraint firstItem="SJR-8n-vte" firstAttribute="top" secondItem="db6-BG-gf8" secondAttribute="top" constant="20" id="fe9-GG-ALN"/>
-                                                <constraint firstItem="SJR-8n-vte" firstAttribute="leading" secondItem="db6-BG-gf8" secondAttribute="leading" constant="16" id="sJH-kY-Efg"/>
+                                                <constraint firstItem="Eg2-VF-sGA" firstAttribute="centerY" secondItem="db6-BG-gf8" secondAttribute="centerY" id="Gra-eA-mT4"/>
+                                                <constraint firstItem="ttP-oG-qBH" firstAttribute="top" secondItem="db6-BG-gf8" secondAttribute="top" id="QBR-x3-uAz"/>
+                                                <constraint firstItem="Eg2-VF-sGA" firstAttribute="leading" secondItem="db6-BG-gf8" secondAttribute="leadingMargin" id="Tcl-Az-za6"/>
+                                                <constraint firstAttribute="bottom" secondItem="ttP-oG-qBH" secondAttribute="bottom" id="XFS-Oc-dHX"/>
+                                                <constraint firstItem="ttP-oG-qBH" firstAttribute="leading" secondItem="db6-BG-gf8" secondAttribute="leading" id="bKD-IF-0Dm"/>
+                                                <constraint firstAttribute="trailing" secondItem="ttP-oG-qBH" secondAttribute="trailing" id="fuf-fI-TNJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -80,9 +78,9 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Universal App UI BG Color"/>
                         <constraints>
-                            <constraint firstItem="cTP-Yh-RIh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="27A-dU-YEG"/>
+                            <constraint firstItem="cTP-Yh-RIh" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="27A-dU-YEG"/>
                             <constraint firstItem="cTP-Yh-RIh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4aL-Si-MO7"/>
                             <constraint firstItem="cTP-Yh-RIh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8LH-Z3-RCI"/>
                             <constraint firstItem="cTP-Yh-RIh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Csd-XU-h5k"/>
@@ -165,7 +163,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XYy-Ij-XAn"/>
-                        <color key="backgroundColor" red="0.87450980389999999" green="0.33725490200000002" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Universal App UI BG Color"/>
                         <constraints>
                             <constraint firstItem="XYy-Ij-XAn" firstAttribute="trailing" secondItem="Rc6-d4-WKT" secondAttribute="trailing" constant="20" id="SjS-WA-moh"/>
                             <constraint firstItem="Rc6-d4-WKT" firstAttribute="centerY" secondItem="9hH-N2-mfK" secondAttribute="centerY" id="Wcn-vt-pAu"/>
@@ -205,8 +203,8 @@
     </scenes>
     <resources>
         <image name="lepassager" width="306" height="475"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="Universal App UI BG Color">
+            <color red="0.99199998378753662" green="0.98000001907348633" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
