@@ -16,13 +16,15 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: ImagePicker Section
+        imageTapGestureRecognizer()
+    }
+    //MARK: ImageTapGestureRecognizer and ImagePicker Section
+    func imageTapGestureRecognizer(){
+        
         bookImage.isUserInteractionEnabled = true
         let imageGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(pickBookCover))
         
         bookImage.addGestureRecognizer(imageGestureRecognizer)
-        
-        
     }
     
     //MARK: Pick Image From Library
