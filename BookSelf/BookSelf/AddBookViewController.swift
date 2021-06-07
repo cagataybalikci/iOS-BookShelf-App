@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -48,7 +49,43 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     //MARK: Save to Core Data
     
     @IBAction func saveDataBtnPressed(_ sender: Any) {
+        print("Button Tapped")
+        saveData()
+        
     }
     
-    
+    func saveData(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let books = NSEntityDescription.insertNewObject(forEntityName: "Books", into: context)
+        
+        books.setValue(bookTitleTextField.text!, forKey: "bookName")
+        
+        if let pageNumber = Int(pageNumberTextField.text!){
+            books.setValue(pageNumber, forKey: "pageNumber")
+        }
+        
+        
+       
+        books.setValue(authorTextField.text!, forKey: "author")
+        books.setValue(UUID(),forKey: "id")
+        
+        let data = bookImage.image!.jpegData(compressionQuality: 0.5)
+        
+        books.setValue(data, forKey: "image")
+        
+        
+        
+        do {
+            try context.save()
+            print("Data Saved")
+        } catch {
+            print("Error!")
+        }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataEntered"), object: nil)
+        navigationController?.popViewController(animated: true)
+        
+    }
 }
