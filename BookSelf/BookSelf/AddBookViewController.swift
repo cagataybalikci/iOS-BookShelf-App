@@ -7,23 +7,46 @@
 
 import UIKit
 
-class AddBookViewController: UIViewController {
+class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var bookImage: UIImageView!
+    @IBOutlet weak var bookTitleTextField: UITextField!
+    @IBOutlet weak var authorTextField: UITextField!
+    @IBOutlet weak var pageNumberTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //MARK: ImagePicker Section
+        bookImage.isUserInteractionEnabled = true
+        let imageGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(pickBookCover))
+        
+        bookImage.addGestureRecognizer(imageGestureRecognizer)
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: Pick Image From Library
+    @objc func pickBookCover(){
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        
+        imagePicker.allowsEditing = true
+        
+        present(imagePicker, animated: true, completion: nil)
+        
     }
-    */
-
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        bookImage.image = info[.editedImage] as? UIImage
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: Save to Core Data
+    
+    @IBAction func saveDataBtnPressed(_ sender: Any) {
+    }
+    
+    
 }
