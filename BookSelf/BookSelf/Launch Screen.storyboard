@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash Screen" translatesAutoresizingMaskIntoConstraints="NO" id="uIg-u6-euK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash Screen" translatesAutoresizingMaskIntoConstraints="NO" id="uIg-u6-euK">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Small" translatesAutoresizingMaskIntoConstraints="NO" id="piC-ex-uRv">
@@ -40,12 +40,12 @@
                         <constraints>
                             <constraint firstItem="piC-ex-uRv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0nQ-LH-9R0"/>
                             <constraint firstItem="JVd-GY-1hk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4gN-jq-bQv"/>
-                            <constraint firstItem="uIg-u6-euK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Ceb-zV-3Ip"/>
+                            <constraint firstItem="uIg-u6-euK" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="NDN-hg-Iqe"/>
                             <constraint firstItem="JVd-GY-1hk" firstAttribute="top" secondItem="piC-ex-uRv" secondAttribute="bottom" id="PE8-3O-AXN"/>
                             <constraint firstItem="piC-ex-uRv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="RML-va-0HO"/>
-                            <constraint firstAttribute="trailing" secondItem="uIg-u6-euK" secondAttribute="trailing" id="S78-Oe-Cad"/>
-                            <constraint firstAttribute="bottom" secondItem="uIg-u6-euK" secondAttribute="bottom" id="X4p-Vs-huK"/>
-                            <constraint firstItem="uIg-u6-euK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="lUY-CE-zxe"/>
+                            <constraint firstItem="uIg-u6-euK" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="lN4-T5-XoM"/>
+                            <constraint firstAttribute="bottom" secondItem="uIg-u6-euK" secondAttribute="bottom" id="t9y-FH-zQ8"/>
+                            <constraint firstItem="uIg-u6-euK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="vKr-vy-3EY"/>
                         </constraints>
                     </view>
                 </viewController>
