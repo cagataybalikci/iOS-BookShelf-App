@@ -14,10 +14,14 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var bookTitleTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!
     @IBOutlet weak var pageNumberTextField: UITextField!
+    @IBOutlet weak var saveBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageTapGestureRecognizer()
+        
+        
+        saveBtn.layer.cornerRadius = 15
     }
     //MARK: ImageTapGestureRecognizer and ImagePicker Section
     func imageTapGestureRecognizer(){
@@ -105,5 +109,22 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataEntered"), object: nil)
         navigationController?.popViewController(animated: true)
         
+    }
+    
+    
+}
+
+//MARK: Add Placeholder Text color to storyboard
+
+extension UITextField {
+    @IBInspectable var placeholderColor: UIColor {
+        get {
+            return attributedPlaceholder?.attribute(.foregroundColor, at: 0, effectiveRange: nil) as? UIColor ?? .clear
+        }
+        set {
+            guard let attributedPlaceholder = attributedPlaceholder else { return }
+            let attributes: [NSAttributedString.Key: UIColor] = [.foregroundColor: newValue]
+            self.attributedPlaceholder = NSAttributedString(string: attributedPlaceholder.string, attributes: attributes)
+        }
     }
 }
