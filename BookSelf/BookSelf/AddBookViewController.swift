@@ -44,6 +44,24 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
         bookImage.image = info[.editedImage] as? UIImage
         
         self.dismiss(animated: true, completion: nil)
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        
+        view.addGestureRecognizer(tapGestureRecognizer)
+        
+    }
+    
+    
+    //MARK: Dismiss Keyboard
+    
+    @objc func dismissKeyboard(){
+        print("Keyboard Dismissed")
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     //MARK: Save to Core Data
