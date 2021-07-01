@@ -1,2 +1,2 @@
 # iOS-BookShelf-App
- Book Management app that uses Core Data and creates a virtual library for user. 
+ Book Management  and also social media app that uses FireBase.
