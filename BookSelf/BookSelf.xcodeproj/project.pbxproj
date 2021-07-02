@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5141D179268F6B0B0050A1EB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5141D178268F6B0B0050A1EB /* SignInViewController.swift */; };
+		5141D17B268F77E30050A1EB /* LoginCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5141D17A268F77E30050A1EB /* LoginCustomTextField.swift */; };
 		514B0003268D88F100525D4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514B0002268D88F100525D4B /* LoginViewController.swift */; };
 		51A07D3926714BF30017637B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A07D3826714BF30017637B /* Launch Screen.storyboard */; };
 		51B8F0E9266DFD9600656C67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8F0E8266DFD9600656C67 /* AppDelegate.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5141D178268F6B0B0050A1EB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		5141D17A268F77E30050A1EB /* LoginCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCustomTextField.swift; sourceTree = "<group>"; };
 		514B0002268D88F100525D4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		51A07D3826714BF30017637B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		51B8F0E5266DFD9600656C67 /* BookSelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5141D177268F6AE50050A1EB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				514B0002268D88F100525D4B /* LoginViewController.swift */,
+				5141D178268F6B0B0050A1EB /* SignInViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		51B8F0DC266DFD9600656C67 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +69,14 @@
 		51B8F0E7266DFD9600656C67 /* BookSelf */ = {
 			isa = PBXGroup;
 			children = (
+				5141D177268F6AE50050A1EB /* Controllers */,
 				51B8F0E8266DFD9600656C67 /* AppDelegate.swift */,
 				51B8F0EA266DFD9600656C67 /* SceneDelegate.swift */,
 				51B8F0EE266DFD9600656C67 /* Main.storyboard */,
 				51B8F0F4266DFD9900656C67 /* Assets.xcassets */,
 				51B8F0F9266DFD9900656C67 /* Info.plist */,
 				51A07D3826714BF30017637B /* Launch Screen.storyboard */,
-				514B0002268D88F100525D4B /* LoginViewController.swift */,
+				5141D17A268F77E30050A1EB /* LoginCustomTextField.swift */,
 			);
 			path = BookSelf;
 			sourceTree = "<group>";
@@ -137,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5141D179268F6B0B0050A1EB /* SignInViewController.swift in Sources */,
 				514B0003268D88F100525D4B /* LoginViewController.swift in Sources */,
 				51B8F0E9266DFD9600656C67 /* AppDelegate.swift in Sources */,
 				51B8F0EB266DFD9600656C67 /* SceneDelegate.swift in Sources */,
+				5141D17B268F77E30050A1EB /* LoginCustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
