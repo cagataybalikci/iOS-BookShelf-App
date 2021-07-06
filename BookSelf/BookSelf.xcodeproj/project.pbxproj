@@ -12,6 +12,9 @@
 		5141D17B268F77E30050A1EB /* LoginCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5141D17A268F77E30050A1EB /* LoginCustomTextField.swift */; };
 		514B0003268D88F100525D4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514B0002268D88F100525D4B /* LoginViewController.swift */; };
 		514DAAB02694B63B00EE1ADA /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DAAAF2694B63B00EE1ADA /* SignUpVC.swift */; };
+		514DAAB22694CEAD00EE1ADA /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DAAB12694CEAD00EE1ADA /* ProfileVC.swift */; };
+		514DAAB42694E46900EE1ADA /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DAAB32694E46900EE1ADA /* FeedVC.swift */; };
+		514DAAB62694E6B500EE1ADA /* CreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DAAB52694E6B500EE1ADA /* CreateVC.swift */; };
 		51A07D3926714BF30017637B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A07D3826714BF30017637B /* Launch Screen.storyboard */; };
 		51B8F0E9266DFD9600656C67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8F0E8266DFD9600656C67 /* AppDelegate.swift */; };
 		51B8F0EB266DFD9600656C67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8F0EA266DFD9600656C67 /* SceneDelegate.swift */; };
@@ -28,6 +31,9 @@
 		5141D17A268F77E30050A1EB /* LoginCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCustomTextField.swift; sourceTree = "<group>"; };
 		514B0002268D88F100525D4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		514DAAAF2694B63B00EE1ADA /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		514DAAB12694CEAD00EE1ADA /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		514DAAB32694E46900EE1ADA /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		514DAAB52694E6B500EE1ADA /* CreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
 		51A07D3826714BF30017637B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		51B8F0E5266DFD9600656C67 /* BookSelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B8F0E8266DFD9600656C67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,9 @@
 				514B0002268D88F100525D4B /* LoginViewController.swift */,
 				5141D178268F6B0B0050A1EB /* SignInViewController.swift */,
 				514DAAAF2694B63B00EE1ADA /* SignUpVC.swift */,
+				514DAAB12694CEAD00EE1ADA /* ProfileVC.swift */,
+				514DAAB32694E46900EE1ADA /* FeedVC.swift */,
+				514DAAB52694E6B500EE1ADA /* CreateVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,9 +237,12 @@
 			files = (
 				514DAAB02694B63B00EE1ADA /* SignUpVC.swift in Sources */,
 				5141D179268F6B0B0050A1EB /* SignInViewController.swift in Sources */,
+				514DAAB22694CEAD00EE1ADA /* ProfileVC.swift in Sources */,
 				514B0003268D88F100525D4B /* LoginViewController.swift in Sources */,
+				514DAAB42694E46900EE1ADA /* FeedVC.swift in Sources */,
 				51B8F0E9266DFD9600656C67 /* AppDelegate.swift in Sources */,
 				51B8F0EB266DFD9600656C67 /* SceneDelegate.swift in Sources */,
+				514DAAB62694E6B500EE1ADA /* CreateVC.swift in Sources */,
 				5141D17B268F77E30050A1EB /* LoginCustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
