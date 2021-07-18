@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5102052C2694B073007F2E43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5102052B2694B073007F2E43 /* GoogleService-Info.plist */; };
+		51126D5326A45A91008BA3BD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51126D5126A45A90008BA3BD /* OpenSans-Bold.ttf */; };
+		51126D5426A45A91008BA3BD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51126D5226A45A90008BA3BD /* OpenSans-Regular.ttf */; };
+		51126D5626A45A9B008BA3BD /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51126D5526A45A9B008BA3BD /* Pacifico-Regular.ttf */; };
 		5141D179268F6B0B0050A1EB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5141D178268F6B0B0050A1EB /* SignInViewController.swift */; };
 		5141D17B268F77E30050A1EB /* LoginCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5141D17A268F77E30050A1EB /* LoginCustomTextField.swift */; };
 		514B0003268D88F100525D4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514B0002268D88F100525D4B /* LoginViewController.swift */; };
@@ -27,6 +30,9 @@
 		15062107FF76CA6D59D1251E /* Pods_BookSelf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookSelf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6B93CDCC39B236AB8A6216 /* Pods-BookSelf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSelf.debug.xcconfig"; path = "Target Support Files/Pods-BookSelf/Pods-BookSelf.debug.xcconfig"; sourceTree = "<group>"; };
 		5102052B2694B073007F2E43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		51126D5126A45A90008BA3BD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		51126D5226A45A90008BA3BD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		51126D5526A45A9B008BA3BD /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		5141D178268F6B0B0050A1EB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5141D17A268F77E30050A1EB /* LoginCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCustomTextField.swift; sourceTree = "<group>"; };
 		514B0002268D88F100525D4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +62,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51126D5026A45963008BA3BD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				51126D5526A45A9B008BA3BD /* Pacifico-Regular.ttf */,
+				51126D5126A45A90008BA3BD /* OpenSans-Bold.ttf */,
+				51126D5226A45A90008BA3BD /* OpenSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		5141D177268F6AE50050A1EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +88,7 @@
 		51B8F0DC266DFD9600656C67 = {
 			isa = PBXGroup;
 			children = (
+				51126D5026A45963008BA3BD /* Fonts */,
 				51B8F0E7266DFD9600656C67 /* BookSelf */,
 				51B8F0E6266DFD9600656C67 /* Products */,
 				DF08DDDF08361ABCC38A43A7 /* Pods */,
@@ -182,6 +199,9 @@
 				51A07D3926714BF30017637B /* Launch Screen.storyboard in Resources */,
 				5102052C2694B073007F2E43 /* GoogleService-Info.plist in Resources */,
 				51B8F0F5266DFD9900656C67 /* Assets.xcassets in Resources */,
+				51126D5626A45A9B008BA3BD /* Pacifico-Regular.ttf in Resources */,
+				51126D5326A45A91008BA3BD /* OpenSans-Bold.ttf in Resources */,
+				51126D5426A45A91008BA3BD /* OpenSans-Regular.ttf in Resources */,
 				51B8F0F0266DFD9600656C67 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="vCq-jo-3cu">
@@ -36,7 +44,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="f2C-5J-jVy"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                         <state key="normal" title="SIGN IN">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -50,7 +58,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="R16-0z-gET"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                         <color key="tintColor" systemColor="systemBackgroundColor"/>
                                         <state key="normal" title="SIGN UP">
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
@@ -107,43 +115,43 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpK-8W-wpA">
-                                <rect key="frame" x="30" y="290" width="354" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <rect key="frame" x="30" y="290" width="354" height="46.666666666666686"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="40"/>
                                 <color key="textColor" name="TextUIColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please sign in to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0A-ov-QDw">
-                                <rect key="frame" x="30" y="343" width="354" height="20"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <rect key="frame" x="30" y="341.66666666666669" width="354" height="18.666666666666686"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gDg-At-PRk" customClass="LoginCustomTextField" customModule="BookSelf" customModuleProvider="target">
-                                <rect key="frame" x="30" y="393" width="354" height="27"/>
+                                <rect key="frame" x="30" y="390.33333333333331" width="354" height="27"/>
                                 <color key="backgroundColor" name="AppUIColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="jBE-Ve-B6a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email_img"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RnD-FQ-bH5" customClass="LoginCustomTextField" customModule="BookSelf" customModuleProvider="target">
-                                <rect key="frame" x="30" y="450" width="354" height="27"/>
+                                <rect key="frame" x="30" y="447.33333333333331" width="354" height="27"/>
                                 <color key="backgroundColor" name="AppUIColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="iDN-du-hmh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Password_img"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2i-mO-HKi">
-                                <rect key="frame" x="253" y="507" width="131" height="50"/>
+                                <rect key="frame" x="253" y="504.33333333333326" width="131" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BiK-UN-v69"/>
                                     <constraint firstAttribute="width" constant="131" id="h1J-N9-ehb"/>
@@ -154,10 +162,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5g-he-4B0">
-                                <rect key="frame" x="70" y="830" width="274" height="32"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <rect key="frame" x="70" y="831" width="274" height="31"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                 <color key="tintColor" red="0.62352941176470589" green="0.25490196078431371" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Don’t have an account?Sign up"/>
+                                <state key="normal" title="Don’t have an account? Sign up"/>
                                 <connections>
                                     <segue destination="B9c-j8-873" kind="presentation" modalPresentationStyle="fullScreen" id="Cwp-46-Qdx"/>
                                 </connections>
@@ -209,8 +217,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypw-zw-SOw">
-                                <rect key="frame" x="30" y="830" width="354" height="32"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <rect key="frame" x="30" y="831" width="354" height="31"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                 <color key="tintColor" red="0.62352941179999999" green="0.25490196079999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Already have an account? Sign in"/>
                                 <connections>
@@ -225,35 +233,35 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUT-ok-DVQ">
-                                <rect key="frame" x="30" y="258" width="354" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <rect key="frame" x="30" y="258" width="354" height="41"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="35"/>
                                 <color key="textColor" name="TextUIColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppZ-cc-AUA" customClass="LoginCustomTextField" customModule="BookSelf" customModuleProvider="target">
-                                <rect key="frame" x="30" y="330" width="354" height="27"/>
+                                <rect key="frame" x="30" y="329" width="354" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="G1Z-2Y-e3r"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email_img"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2PK-rh-cPl" customClass="LoginCustomTextField" customModule="BookSelf" customModuleProvider="target">
-                                <rect key="frame" x="30" y="387" width="354" height="27"/>
+                                <rect key="frame" x="30" y="386" width="354" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="lDb-ZJ-Q3l"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Password_img"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAI-4z-r7l">
-                                <rect key="frame" x="244" y="444" width="140" height="50"/>
+                                <rect key="frame" x="244" y="443" width="140" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dWs-Iy-l1X"/>
                                     <constraint firstAttribute="width" constant="140" id="seU-pK-Rw7"/>
@@ -356,19 +364,20 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52w-zS-MiH">
                                                         <rect key="frame" x="0.0" y="0.0" width="230" height="31.666666666666668"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfF-mU-3T7">
                                                         <rect key="frame" x="0.0" y="36.666666666666657" width="230" height="31.666666666666671"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFL-hs-s7V">
                                                         <rect key="frame" x="0.0" y="73.333333333333343" width="230" height="31.666666666666671"/>
                                                         <color key="backgroundColor" name="AppUIColor"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                         <state key="normal" title="Edit">
                                                             <color key="titleColor" name="TextUIColor"/>
                                                         </state>
@@ -383,54 +392,54 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y9Z-4r-aTu">
-                                        <rect key="frame" x="16" y="141" width="350" height="37.666666666666657"/>
+                                        <rect key="frame" x="16" y="141" width="350" height="36.666666666666657"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UdQ-sh-Zo7">
-                                                <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="37.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="36.666666666666664"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="170" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuU-mZ-3fb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="16.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-N6-HhY">
-                                                        <rect key="frame" x="0.0" y="22" width="106.66666666666667" height="15.666666666666664"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <rect key="frame" x="0.0" y="21.333333333333314" width="106.66666666666667" height="15.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZwY-1g-tNh">
-                                                <rect key="frame" x="121.66666666666666" y="0.0" width="106.66666666666666" height="37.666666666666664"/>
+                                                <rect key="frame" x="121.66666666666666" y="0.0" width="106.66666666666666" height="36.666666666666664"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="170" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4q-ba-r0l">
-                                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="16.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xU-Ur-TFw">
-                                                        <rect key="frame" x="0.0" y="22" width="106.66666666666667" height="15.666666666666664"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <rect key="frame" x="0.0" y="21.333333333333314" width="106.66666666666667" height="15.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hKg-bA-kX0">
-                                                <rect key="frame" x="243.33333333333329" y="0.0" width="106.66666666666666" height="37.666666666666664"/>
+                                                <rect key="frame" x="243.33333333333329" y="0.0" width="106.66666666666666" height="36.666666666666664"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="170" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVZ-o6-u6M">
-                                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="16.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmz-gA-bor">
-                                                        <rect key="frame" x="0.0" y="22" width="106.66666666666667" height="15.666666666666664"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <rect key="frame" x="0.0" y="21.333333333333314" width="106.66666666666667" height="15.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -628,20 +637,20 @@
     </scenes>
     <designables>
         <designable name="2PK-rh-cPl">
-            <size key="intrinsicContentSize" width="100" height="21"/>
+            <size key="intrinsicContentSize" width="101" height="20.333333333333332"/>
         </designable>
         <designable name="RnD-FQ-bH5">
-            <size key="intrinsicContentSize" width="100" height="21"/>
+            <size key="intrinsicContentSize" width="101" height="20.333333333333332"/>
         </designable>
         <designable name="gDg-At-PRk">
-            <size key="intrinsicContentSize" width="69" height="21"/>
+            <size key="intrinsicContentSize" width="69.666666666666671" height="20.333333333333332"/>
         </designable>
         <designable name="ppZ-cc-AUA">
-            <size key="intrinsicContentSize" width="69" height="21"/>
+            <size key="intrinsicContentSize" width="69.666666666666671" height="20.333333333333332"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="w6c-TY-lZv"/>
+        <segue reference="Cwp-46-Qdx"/>
         <segue reference="IOR-i0-xyb"/>
     </inferredMetricsTieBreakers>
     <resources>

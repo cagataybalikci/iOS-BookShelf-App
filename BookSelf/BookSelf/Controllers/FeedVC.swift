@@ -19,6 +19,7 @@ class FeedVC: UIViewController {
     func navItemsConfig(){
         let titleLabel = UILabel()
         titleLabel.text = "Bookshelf"
+        titleLabel.font = UIFont(name: "OpenSans-Bold", size: 20)
         titleLabel.sizeToFit()
         
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(customView: titleLabel)
