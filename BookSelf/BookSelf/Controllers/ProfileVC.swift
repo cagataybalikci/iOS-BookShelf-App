@@ -10,10 +10,12 @@ import Firebase
 
 class ProfileVC: UIViewController {
 
+    @IBOutlet weak var profileName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navItemsConfig()
+        profileName.text = Auth.auth().currentUser?.email?.components(separatedBy: "@")[0].capitalized
         
     }
     

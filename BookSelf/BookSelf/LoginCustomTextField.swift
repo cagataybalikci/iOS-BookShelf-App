@@ -7,13 +7,10 @@
 
 import UIKit
 
-@IBDesignable
+
 class LoginCustomTextField: UITextField {
     
-    override func prepareForInterfaceBuilder() {
-        setup()
-        setIcon()
-    }
+    
     
     func setup() {
         let border = CALayer()
