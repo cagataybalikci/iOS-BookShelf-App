@@ -25,6 +25,7 @@
 		51B8F0EB266DFD9600656C67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8F0EA266DFD9600656C67 /* SceneDelegate.swift */; };
 		51B8F0F0266DFD9600656C67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51B8F0EE266DFD9600656C67 /* Main.storyboard */; };
 		51B8F0F5266DFD9900656C67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B8F0F4266DFD9900656C67 /* Assets.xcassets */; };
+		51BA7E0726B080A900BE4894 /* BrowserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA7E0626B080A900BE4894 /* BrowserVC.swift */; };
 		F3182B21FE6E26CB53490E4C /* Pods_BookSelf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15062107FF76CA6D59D1251E /* Pods_BookSelf.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		51B8F0EF266DFD9600656C67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51B8F0F4266DFD9900656C67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51B8F0F9266DFD9900656C67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51BA7E0626B080A900BE4894 /* BrowserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserVC.swift; sourceTree = "<group>"; };
 		5A53DC3EC9FD77705B50FD59 /* Pods-BookSelf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSelf.release.xcconfig"; path = "Target Support Files/Pods-BookSelf/Pods-BookSelf.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				514DAAB12694CEAD00EE1ADA /* ProfileVC.swift */,
 				514DAAB32694E46900EE1ADA /* FeedVC.swift */,
 				514DAAB52694E6B500EE1ADA /* CreateVC.swift */,
+				51BA7E0626B080A900BE4894 /* BrowserVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				514DAAB02694B63B00EE1ADA /* SignUpVC.swift in Sources */,
 				519A042726A7523A00D01891 /* Post.swift in Sources */,
 				519A042426A7507200D01891 /* FeedCell.swift in Sources */,
+				51BA7E0726B080A900BE4894 /* BrowserVC.swift in Sources */,
 				5141D179268F6B0B0050A1EB /* SignInViewController.swift in Sources */,
 				514DAAB22694CEAD00EE1ADA /* ProfileVC.swift in Sources */,
 				514B0003268D88F100525D4B /* LoginViewController.swift in Sources */,
