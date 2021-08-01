@@ -70,6 +70,8 @@
 	</array>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>We need to access your photo library for pick an image to share.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Save Photo to Album</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

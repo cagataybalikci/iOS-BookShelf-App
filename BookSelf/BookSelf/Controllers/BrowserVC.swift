@@ -23,18 +23,16 @@ class BrowserVC: UIViewController, UISearchControllerDelegate, UISearchBarDelega
         searchController.delegate = self
         searchController.searchBar.delegate = self
         searchController.searchBar.placeholder = "Search/Enter website"
+        searchController.searchBar.tintColor = #colorLiteral(red: 0.6235294118, green: 0.2549019608, blue: 0.2941176471, alpha: 1)
         
-        let backImage = UIImage(systemName: "chevron.backward")
+        let backImage = UIImage(systemName: "chevron.backward")?.withRenderingMode(.alwaysTemplate)
+        let bookmarkImage = UIImage(systemName: "bookmark")?.withRenderingMode(.alwaysTemplate)
+        let forwardImage = UIImage(systemName: "chevron.forward")?.withRenderingMode(.alwaysTemplate)
+        let refreshImage = UIImage(systemName: "arrow.clockwise")?.withRenderingMode(.alwaysTemplate)
+        
         let backButton = UIBarButtonItem(image: backImage, style: .plain , target: self, action: #selector(backButtonPressed))
-        
-        let forwardImage = UIImage(systemName: "chevron.forward")
         let forwardButton = UIBarButtonItem(image: forwardImage, style: .plain , target: self, action: #selector(forwardButtonPressed))
-        
-        let refreshImage = UIImage(systemName: "arrow.clockwise")
         let refreshButton = UIBarButtonItem(image: refreshImage, style: .plain , target: self, action: #selector(refreshButtonPressed))
-        
-        
-        let bookmarkImage = UIImage(systemName: "bookmark")
         let bookmarkButton = UIBarButtonItem(image: bookmarkImage, style: .plain , target: self, action: #selector(bookmarkButtonPressed))
         
         let appNameLabel = UILabel()
@@ -46,6 +44,10 @@ class BrowserVC: UIViewController, UISearchControllerDelegate, UISearchBarDelega
         self.navigationItem.searchController = searchController
         self.navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(customView: appNameLabel)
         self.navigationItem.rightBarButtonItems = [bookmarkButton,refreshButton,forwardButton,backButton]
+        
+        for button in self.navigationItem.rightBarButtonItems! {
+            button.tintColor = #colorLiteral(red: 0.6235294118, green: 0.2549019608, blue: 0.2941176471, alpha: 1)
+        }
         
         
         
@@ -75,7 +77,7 @@ class BrowserVC: UIViewController, UISearchControllerDelegate, UISearchBarDelega
     }
     
     
-    //MARK: Browser Button Actions
+    //MARK: Browser Bookmark Section
     
     @objc func bookmarkButtonPressed(){
         let ac = UIAlertController(title: "Bookmarks", message: nil, preferredStyle: .actionSheet)

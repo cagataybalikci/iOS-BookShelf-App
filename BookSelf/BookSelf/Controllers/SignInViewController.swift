@@ -49,6 +49,8 @@ class SignInViewController: UIViewController {
         view.endEditing(true)
     }
     
+    
+    
     //MARK: Error Messages
     func showErrorMessage(title: String,message:String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
