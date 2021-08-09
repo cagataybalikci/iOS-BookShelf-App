@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import SDWebImage
 
 class FeedCell: UITableViewCell {
 
@@ -15,6 +17,7 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var cardVEView: UIVisualEffectView!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var userProfileImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,6 +36,8 @@ class FeedCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }
 

@@ -54,8 +54,6 @@ class CreateVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     
     //MARK: NAVITEMS
     func navItemsConfig(){
-        
-        
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "CancelBtn"), style: UIBarButtonItem.Style.done, target: self, action: #selector(cancelBtnPressed))
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "DoneBtn"), style: UIBarButtonItem.Style.done, target: self, action: #selector(shareBtnPressed(_:)))
         navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.6235294118, green: 0.2549019608, blue: 0.2941176471, alpha: 1)
@@ -86,9 +84,10 @@ class CreateVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                                     self.captionTextView.text = ""
                                 }
                                 
-                                let firestorePost = ["imageUrl":imageURL,"caption":self.captionTextView.text!,"email":Auth.auth().currentUser!.email  ,"date":FieldValue.serverTimestamp()] as [String:Any]
+                                let firestorePost = ["imageUrl":imageURL,"caption":self.captionTextView.text!,"email":Auth.auth().currentUser!.email!  ,"date":FieldValue.serverTimestamp()] as [String:Any]
                                 fireStoreDB.collection("Post").addDocument(data: firestorePost) { (error) in
                                     if error != nil{
+                                        
                                         self.showErrorMessage(title: "Error", messageBody: error?.localizedDescription ?? "Error occured while creating post. Please try again.")
                                     }else{
                                         self.captionTextView.text = "Enter your comment..."
@@ -112,7 +111,6 @@ class CreateVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         
     func showErrorMessage(title: String, messageBody: String){
         let alert = UIAlertController(title: title, message: messageBody, preferredStyle: .alert)
-            
         let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)

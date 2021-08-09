@@ -14,12 +14,16 @@ class FeedVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var postArray = [Post]()
+    var userInfo = [User]()
     override func viewDidLoad() {
         super.viewDidLoad()
         navItemsConfig()
         tableView.delegate = self
         tableView.dataSource = self
         getDatas()
+        
+    
+        
     }
     
     
@@ -39,6 +43,7 @@ class FeedVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
                                 if let email = document.get("email") as? String{
                                     let post = Post(email: email, caption: caption, imageUrl: imageURL)
                                     self.postArray.append(post)
+                                    
                                 }
                             }
                         }
@@ -48,6 +53,34 @@ class FeedVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             }
         }
     }
+    
+    //MARK: FIREBASE USER INFO
+    func getUserInfo(userEmail:String,cell: FeedCell){
+        let firestoreDB = Firestore.firestore()
+        
+        firestoreDB.collection("Users").whereField("email", isEqualTo: userEmail).addSnapshotListener { snapshot, error in
+            if error != nil {
+                print(error?.localizedDescription ?? "Error while getting data from server!" )
+            }else{
+                if snapshot?.isEmpty != true && snapshot != nil {
+                    self.userInfo.removeAll(keepingCapacity: false)
+                    for document in snapshot!.documents{
+                        if let profileImg = document.get("profileImageURL") as? String{
+                                if let username = document.get("username") as? String{
+                                    cell.userNameLabel.text = username
+                                    cell.userProfileImage.sd_setImage(with: URL(string: profileImg))
+                                    cell.userProfileImage.layer.cornerRadius = 20
+
+                                }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    
 
     //MARK: Navigation Items Config
     func navItemsConfig(){
@@ -71,7 +104,7 @@ class FeedVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
-        cell.userNameLabel.text = postArray[indexPath.row].email.components(separatedBy: "@")[0]
+        self.getUserInfo(userEmail: postArray[indexPath.row].email,cell: cell)
         cell.captionLabel.text =  postArray[indexPath.row].caption
         cell.postImage.sd_setImage(with: URL(string: postArray[indexPath.row].imageUrl))
         return cell

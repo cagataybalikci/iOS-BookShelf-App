@@ -28,6 +28,8 @@
 		51BA7E0726B080A900BE4894 /* BrowserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA7E0626B080A900BE4894 /* BrowserVC.swift */; };
 		51BA7E0A26B0BA4600BE4894 /* postCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA7E0926B0BA4600BE4894 /* postCell.swift */; };
 		51BA7E0E26B0BB2700BE4894 /* UserPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA7E0D26B0BB2700BE4894 /* UserPost.swift */; };
+		51CD1A1826C15A77004D5577 /* UpdateProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD1A1726C15A77004D5577 /* UpdateProfileVC.swift */; };
+		51CD1A1A26C1978E004D5577 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD1A1926C1978E004D5577 /* User.swift */; };
 		F3182B21FE6E26CB53490E4C /* Pods_BookSelf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15062107FF76CA6D59D1251E /* Pods_BookSelf.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		51BA7E0626B080A900BE4894 /* BrowserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserVC.swift; sourceTree = "<group>"; };
 		51BA7E0926B0BA4600BE4894 /* postCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postCell.swift; sourceTree = "<group>"; };
 		51BA7E0D26B0BB2700BE4894 /* UserPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPost.swift; sourceTree = "<group>"; };
+		51CD1A1726C15A77004D5577 /* UpdateProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileVC.swift; sourceTree = "<group>"; };
+		51CD1A1926C1978E004D5577 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A53DC3EC9FD77705B50FD59 /* Pods-BookSelf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSelf.release.xcconfig"; path = "Target Support Files/Pods-BookSelf/Pods-BookSelf.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +105,7 @@
 				514DAAB32694E46900EE1ADA /* FeedVC.swift */,
 				514DAAB52694E6B500EE1ADA /* CreateVC.swift */,
 				51BA7E0626B080A900BE4894 /* BrowserVC.swift */,
+				51CD1A1726C15A77004D5577 /* UpdateProfileVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			children = (
 				519A042626A7523A00D01891 /* Post.swift */,
 				51BA7E0D26B0BB2700BE4894 /* UserPost.swift */,
+				51CD1A1926C1978E004D5577 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				519A042726A7523A00D01891 /* Post.swift in Sources */,
 				519A042426A7507200D01891 /* FeedCell.swift in Sources */,
 				51BA7E0A26B0BA4600BE4894 /* postCell.swift in Sources */,
+				51CD1A1A26C1978E004D5577 /* User.swift in Sources */,
 				51BA7E0726B080A900BE4894 /* BrowserVC.swift in Sources */,
 				5141D179268F6B0B0050A1EB /* SignInViewController.swift in Sources */,
 				51BA7E0E26B0BB2700BE4894 /* UserPost.swift in Sources */,
@@ -306,6 +313,7 @@
 				514DAAB42694E46900EE1ADA /* FeedVC.swift in Sources */,
 				51B8F0E9266DFD9600656C67 /* AppDelegate.swift in Sources */,
 				51B8F0EB266DFD9600656C67 /* SceneDelegate.swift in Sources */,
+				51CD1A1826C15A77004D5577 /* UpdateProfileVC.swift in Sources */,
 				514DAAB62694E6B500EE1ADA /* CreateVC.swift in Sources */,
 				5141D17B268F77E30050A1EB /* LoginCustomTextField.swift in Sources */,
 			);

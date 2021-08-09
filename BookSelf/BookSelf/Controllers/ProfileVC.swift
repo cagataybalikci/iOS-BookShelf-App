@@ -12,12 +12,12 @@ import SDWebImage
 class ProfileVC: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var profileCard: UIImageView!
-    
-    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileBioLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var profileName: UILabel!
     var userPosts = [UserPost]()
-    
+    @IBOutlet weak var postCountLabel: UILabel!
     
     @IBOutlet weak var editButton: UIButton!
     
@@ -26,7 +26,10 @@ class ProfileVC: UIViewController, UICollectionViewDelegate {
         
         
         navItemsConfig()
-        profileName.text = Auth.auth().currentUser?.email?.components(separatedBy: "@")[0].capitalized
+        
+        getUserInfo()
+        profileImage.layer.cornerRadius = profileImage.bounds.width / 2
+        
         editButton.layer.cornerRadius = 10
         profileCard.layer.cornerRadius = 20
         
@@ -34,6 +37,8 @@ class ProfileVC: UIViewController, UICollectionViewDelegate {
         collectionView.dataSource = self
         
         getDatas()
+        
+        
         
     }
     
@@ -55,6 +60,7 @@ class ProfileVC: UIViewController, UICollectionViewDelegate {
                             if let caption = document.get("caption") as? String{
                                 let post = UserPost(caption: caption, imageUrl: imageURL)
                                 self.userPosts.append(post)
+                                self.postCountLabel.text = "\(self.userPosts.count)"
                             }
                         }
                     }
@@ -63,6 +69,34 @@ class ProfileVC: UIViewController, UICollectionViewDelegate {
             }
         }
     }
+    
+    //MARK: GET USER INFO
+    func getUserInfo(){
+        let firestoreDB = Firestore.firestore()
+        
+        firestoreDB.collection("Users").whereField("email", isEqualTo: Auth.auth().currentUser?.email).addSnapshotListener { snapshot, error in
+            if error != nil {
+                print(error?.localizedDescription ?? "Error while getting data from server!" )
+            }else{
+                if snapshot?.isEmpty != true && snapshot != nil {
+                    
+                    for document in snapshot!.documents{
+                        if let profileImg = document.get("profileImageURL") as? String{
+                            if let bio = document.get("bio") as? String{
+                                if let username = document.get("username") as? String{
+                                    self.profileImage.sd_setImage(with: URL(string: profileImg))
+                                    self.profileName.text = username
+                                    self.profileBioLabel.text = bio
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
     
     
     
@@ -80,9 +114,8 @@ class ProfileVC: UIViewController, UICollectionViewDelegate {
         navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.6235294118, green: 0.2549019608, blue: 0.2941176471, alpha: 1)
     }
     
-    
-    @objc func signOut(){
-       
+    @IBAction func editBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "toUpdate", sender: nil)
     }
     
 

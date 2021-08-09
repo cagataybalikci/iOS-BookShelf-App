@@ -12,11 +12,14 @@ class SignUpVC: UIViewController {
 
     @IBOutlet weak var emailTextField: LoginCustomTextField!
     @IBOutlet weak var passwordTextField: LoginCustomTextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Dismiss Keyboard
         createGestureRecognizer()
+        
         
     }
     
@@ -47,7 +50,14 @@ class SignUpVC: UIViewController {
                 if (error != nil){
                     self.showErrorMessage(title: "Oops...", message: error?.localizedDescription ?? "Something went wrong. Please try again.")
                 }else{
-                    self.performSegue(withIdentifier: "toLoginVC", sender: nil)
+                    Auth.auth().signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (AuthDataResult,error) in
+                        if(error != nil){
+                            self.showErrorMessage(title: "Something wrong...", message: error?.localizedDescription ?? "Check your email or password and try again to login.")
+                        }else{
+                            self.performSegue(withIdentifier: "toUpdate", sender: nil)
+                        }
+                    }
+                    
                 }
             }
         }
