@@ -20,7 +20,7 @@ class BorderedButton: UIButton {
     }
     
     private func setup(){
-        self.layer.cornerRadius = 20
+        self.layer.cornerRadius = 5
     }
     
     override func prepareForInterfaceBuilder() {
