@@ -14,20 +14,26 @@ class FeedCell: UITableViewCell {
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var postImage: UIImageView!
-    @IBOutlet weak var cardVEView: UIVisualEffectView!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var userProfileImage: UIImageView!
+    @IBOutlet weak var cardView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         containerView.layer.cornerRadius = 20
-        containerView.layer.masksToBounds = true
-        
+        cardView.layer.cornerRadius = 20
         postImage.layer.masksToBounds = true
-        cardVEView.layer.masksToBounds = true
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowOpacity = 0.25
+        containerView.layer.shadowOffset = .zero
+        containerView.layer.shadowRadius = 10
         
+        containerView.layer.shadowPath = UIBezierPath(rect: containerView.bounds).cgPath
         
+        containerView.layer.shouldRasterize = true
+
+        containerView.layer.rasterizationScale = UIScreen.main.scale
         
     }
     

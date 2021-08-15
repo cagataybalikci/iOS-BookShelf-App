@@ -6,7 +6,7 @@
 //
 
 import UIKit
-@IBDesignable
+
 class BorderedButton: UIButton {
 
     override init(frame: CGRect) {
@@ -23,7 +23,5 @@ class BorderedButton: UIButton {
         self.layer.cornerRadius = 5
     }
     
-    override func prepareForInterfaceBuilder() {
-          setup()
-      }
+   
 }

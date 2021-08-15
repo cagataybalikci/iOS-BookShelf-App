@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        UITabBar.appearance().tintColor = UIColor(red: 159/255.0, green: 69/255.0, blue: 75/255.0, alpha: 1.0)
+        UITabBar.appearance().tintColor = UIColor(named: "AccentColor")
         FirebaseApp.configure()
         return true
     }

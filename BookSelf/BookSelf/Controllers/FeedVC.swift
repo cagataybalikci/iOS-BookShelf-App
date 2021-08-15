@@ -21,9 +21,6 @@ class FeedVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         getDatas()
-        
-    
-        
     }
     
     
@@ -69,7 +66,7 @@ class FeedVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
                                 if let username = document.get("username") as? String{
                                     cell.userNameLabel.text = username
                                     cell.userProfileImage.sd_setImage(with: URL(string: profileImg))
-                                    cell.userProfileImage.layer.cornerRadius = 20
+                                    cell.userProfileImage.layer.cornerRadius = cell.userProfileImage.bounds.width / 2
 
                                 }
                         }
@@ -86,12 +83,12 @@ class FeedVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     func navItemsConfig(){
         let titleLabel = UILabel()
         titleLabel.text = "Bookshelf"
-        titleLabel.font = UIFont(name: "OpenSans-Bold", size: 20)
+        titleLabel.font = UIFont(name: "Avenir Next Bold", size: 20)
         titleLabel.sizeToFit()
         
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(customView: titleLabel)
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Add Btn"), style: UIBarButtonItem.Style.done, target: self, action: #selector(addBtnPressed))
-        navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.6235294118, green: 0.2549019608, blue: 0.2941176471, alpha: 1)
+        navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = UIColor(named: "AccentColor")
     }
     
     @objc func addBtnPressed(){

@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "imagePlaceholder.png",
+      "filename" : "CreateBg.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "imagePlaceholder@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "imagePlaceholder@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

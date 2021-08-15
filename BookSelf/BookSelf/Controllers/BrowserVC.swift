@@ -23,7 +23,7 @@ class BrowserVC: UIViewController, UISearchControllerDelegate, UISearchBarDelega
         searchController.delegate = self
         searchController.searchBar.delegate = self
         searchController.searchBar.placeholder = "Search/Enter website"
-        searchController.searchBar.tintColor = #colorLiteral(red: 0.6235294118, green: 0.2549019608, blue: 0.2941176471, alpha: 1)
+        searchController.searchBar.tintColor = UIColor(named: "AccentColor")
         
         let backImage = UIImage(systemName: "chevron.backward")?.withRenderingMode(.alwaysTemplate)
         let bookmarkImage = UIImage(systemName: "bookmark")?.withRenderingMode(.alwaysTemplate)
@@ -37,7 +37,7 @@ class BrowserVC: UIViewController, UISearchControllerDelegate, UISearchBarDelega
         
         let appNameLabel = UILabel()
         appNameLabel.text = "BookShelf"
-        appNameLabel.font = UIFont(name: "OpenSans-Bold", size: 20)
+        appNameLabel.font = UIFont(name: "Avenir Next Bold", size: 20)
         appNameLabel.sizeToFit()
         
         
@@ -46,7 +46,7 @@ class BrowserVC: UIViewController, UISearchControllerDelegate, UISearchBarDelega
         self.navigationItem.rightBarButtonItems = [bookmarkButton,refreshButton,forwardButton,backButton]
         
         for button in self.navigationItem.rightBarButtonItems! {
-            button.tintColor = #colorLiteral(red: 0.6235294118, green: 0.2549019608, blue: 0.2941176471, alpha: 1)
+            button.tintColor = UIColor(named: "AccentColor")
         }
         
         

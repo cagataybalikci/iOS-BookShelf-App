@@ -12,6 +12,7 @@ class CreateVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     @IBOutlet weak var captionTextView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var shareBtn: UIButton!
+    @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +57,9 @@ class CreateVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     func navItemsConfig(){
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "CancelBtn"), style: UIBarButtonItem.Style.done, target: self, action: #selector(cancelBtnPressed))
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "DoneBtn"), style: UIBarButtonItem.Style.done, target: self, action: #selector(shareBtnPressed(_:)))
-        navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.6235294118, green: 0.2549019608, blue: 0.2941176471, alpha: 1)
-        navigationController?.navigationBar.topItem?.leftBarButtonItem?.tintColor = #colorLiteral(red: 0.6235294118, green: 0.2549019608, blue: 0.2941176471, alpha: 1)
+        navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = UIColor(named: "AccentColor")
+        navigationController?.navigationBar.topItem?.leftBarButtonItem?.tintColor = UIColor(named: "AccentColor")
+        containerView.layer.cornerRadius = 10
     }
     
     
