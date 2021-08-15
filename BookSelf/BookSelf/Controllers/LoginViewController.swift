@@ -13,8 +13,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signInBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        signUpBtn.layer.cornerRadius = 20
-        signInBtn.layer.cornerRadius = 20
+//        signUpBtn.layer.cornerRadius = 20
+//        signInBtn.layer.cornerRadius = 20
+        
         
     }
     
@@ -22,3 +23,5 @@ class LoginViewController: UIViewController {
     
 
 }
+
+

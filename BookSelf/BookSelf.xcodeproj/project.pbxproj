@@ -11,6 +11,7 @@
 		51126D5326A45A91008BA3BD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51126D5126A45A90008BA3BD /* OpenSans-Bold.ttf */; };
 		51126D5426A45A91008BA3BD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51126D5226A45A90008BA3BD /* OpenSans-Regular.ttf */; };
 		51126D5626A45A9B008BA3BD /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51126D5526A45A9B008BA3BD /* Pacifico-Regular.ttf */; };
+		5134365426C94BC000B9A7D7 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134365326C94BC000B9A7D7 /* BorderedButton.swift */; };
 		5141D179268F6B0B0050A1EB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5141D178268F6B0B0050A1EB /* SignInViewController.swift */; };
 		5141D17B268F77E30050A1EB /* LoginCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5141D17A268F77E30050A1EB /* LoginCustomTextField.swift */; };
 		514B0003268D88F100525D4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514B0002268D88F100525D4B /* LoginViewController.swift */; };
@@ -40,6 +41,7 @@
 		51126D5126A45A90008BA3BD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		51126D5226A45A90008BA3BD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		51126D5526A45A9B008BA3BD /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		5134365326C94BC000B9A7D7 /* BorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		5141D178268F6B0B0050A1EB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5141D17A268F77E30050A1EB /* LoginCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCustomTextField.swift; sourceTree = "<group>"; };
 		514B0002268D88F100525D4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				5141D17A268F77E30050A1EB /* LoginCustomTextField.swift */,
 				51BA7E0926B0BA4600BE4894 /* postCell.swift */,
 				519A042326A7507100D01891 /* FeedCell.swift */,
+				5134365326C94BC000B9A7D7 /* BorderedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				514DAAB22694CEAD00EE1ADA /* ProfileVC.swift in Sources */,
 				514B0003268D88F100525D4B /* LoginViewController.swift in Sources */,
 				514DAAB42694E46900EE1ADA /* FeedVC.swift in Sources */,
+				5134365426C94BC000B9A7D7 /* BorderedButton.swift in Sources */,
 				51B8F0E9266DFD9600656C67 /* AppDelegate.swift in Sources */,
 				51B8F0EB266DFD9600656C67 /* SceneDelegate.swift in Sources */,
 				51CD1A1826C15A77004D5577 /* UpdateProfileVC.swift in Sources */,

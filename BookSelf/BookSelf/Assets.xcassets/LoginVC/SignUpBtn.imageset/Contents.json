@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Gradient BG.png",
+      "filename" : "SignUpBtn.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Gradient BG@2x.png",
+      "filename" : "SignUpBtn@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Gradient BG@3x.png",
+      "filename" : "SignUpBtn@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
