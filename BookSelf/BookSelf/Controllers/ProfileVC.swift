@@ -16,40 +16,31 @@ class ProfileVC: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var profileBioLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var profileName: UILabel!
-    var userPosts = [UserPost]()
     @IBOutlet weak var postCountLabel: UILabel!
-    
     @IBOutlet weak var editButton: UIButton!
+    
+    var userPosts = [UserPost]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         navItemsConfig()
-        
         getUserInfo()
-        profileImage.layer.cornerRadius = profileImage.bounds.width / 2
-        
-        editButton.layer.cornerRadius = 10
-        profileCard.layer.cornerRadius = 20
-        
+        layoutConfig()
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         getDatas()
-        
-        
-        
+        navigationController?.isNavigationBarHidden = true
     }
     
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        layoutConfig()
+    }
+
     //MARK: USER POSTS
     
     func getDatas(){
         let firestoreDB = Firestore.firestore()
-        
-        firestoreDB.collection("Post").whereField("email", isEqualTo: Auth.auth().currentUser?.email).addSnapshotListener { snapshot, error in
+        firestoreDB.collection("Post").whereField("email", isEqualTo: Auth.auth().currentUser!.email!).addSnapshotListener { snapshot, error in
             if error != nil {
                 print(error?.localizedDescription ?? "Error while getting data from server!" )
             }else{
@@ -71,10 +62,10 @@ class ProfileVC: UIViewController, UICollectionViewDelegate {
     }
     
     //MARK: GET USER INFO
+    
     func getUserInfo(){
         let firestoreDB = Firestore.firestore()
-        
-        firestoreDB.collection("Users").whereField("email", isEqualTo: Auth.auth().currentUser?.email).addSnapshotListener { snapshot, error in
+        firestoreDB.collection("Users").whereField("email", isEqualTo: Auth.auth().currentUser!.email!).addSnapshotListener { snapshot, error in
             if error != nil {
                 print(error?.localizedDescription ?? "Error while getting data from server!" )
             }else{
@@ -97,10 +88,14 @@ class ProfileVC: UIViewController, UICollectionViewDelegate {
         }
     }
 
-    
-    
-    
-    
+    //MARK: UI Element Corner radius on start
+    func layoutConfig() {
+        profileImage.layer.cornerRadius = profileImage.bounds.width / 2
+        profileImage.layer.borderWidth = 5
+        profileImage.layer.borderColor = UIColor(named: "AppUIColor")?.cgColor
+        profileCard.layer.cornerRadius = 20
+        
+    }
     //MARK: Navigation Items Config
     func navItemsConfig(){
         
@@ -144,6 +139,7 @@ class ProfileVC: UIViewController, UICollectionViewDelegate {
 
 }
 
+//MARK: Collection View Extensions
 extension ProfileVC : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! postCell

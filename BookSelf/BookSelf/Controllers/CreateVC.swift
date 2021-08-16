@@ -53,6 +53,9 @@ class CreateVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func pickImageBtnPressed(_ sender: Any) {
+        selectImage()
+    }
     //MARK: NAVITEMS
     func navItemsConfig(){
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "CancelBtn"), style: UIBarButtonItem.Style.done, target: self, action: #selector(cancelBtnPressed))

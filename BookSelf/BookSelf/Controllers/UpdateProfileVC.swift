@@ -13,10 +13,14 @@ class UpdateProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavig
     
     
     
+    @IBOutlet weak var profileImageAddBtn: UIButton!
+    @IBOutlet weak var BannerAddBtn: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var bioTextField: UITextField!
     @IBOutlet weak var updateBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
@@ -24,6 +28,18 @@ class UpdateProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavig
         profileImageView.isUserInteractionEnabled = true
         updateBtn.isEnabled = false
         setupForGestureRecognizers()
+        
+        //TODO: Extract Own Method
+        profileImageAddBtn.layer.cornerRadius = profileImageAddBtn.bounds.width / 2
+        profileImageAddBtn.layer.borderColor = UIColor(named: "CreatePostUIColor")?.cgColor
+        profileImageAddBtn.layer.borderWidth = 2
+        
+        profileImageView.layer.borderColor = UIColor(named: "AppUIColor")?.cgColor
+        profileImageView.layer.borderWidth = 5
+        profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
+        
+        BannerAddBtn.layer.cornerRadius = BannerAddBtn.bounds.width / 2
+        
     }
     
     func setupForGestureRecognizers(){
@@ -93,6 +109,9 @@ class UpdateProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavig
         
     }
     
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func updateBtnPressed(_ sender: Any) {
         updateProfile()
