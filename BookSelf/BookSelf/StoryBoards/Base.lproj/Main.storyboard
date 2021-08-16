@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RE4-Hh-3Ja">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -587,6 +587,9 @@ book friends</string>
                                                 </constraints>
                                                 <color key="tintColor" name="CreatePostUIColor"/>
                                                 <state key="normal" image="gearshape" catalog="system"/>
+                                                <connections>
+                                                    <segue destination="GYh-tB-Zpe" kind="show" id="kOQ-nR-Ju7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -681,6 +684,111 @@ book friends</string>
             </objects>
             <point key="canvasLocation" x="-526.08695652173913" y="407.8125"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="7PS-M0-vMh">
+            <objects>
+                <viewController id="GYh-tB-Zpe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QoO-yI-tVH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZR-XY-18S">
+                                <rect key="frame" x="173" y="776" width="68" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" name="PrimaryRed"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6P-5E-pRC">
+                                <rect key="frame" x="20" y="47" width="30" height="24.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Cgr-xw-d1t"/>
+                                    <constraint firstAttribute="width" constant="30" id="z6O-xV-Ptc"/>
+                                </constraints>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" backgroundImage="arrow.backward" catalog="system"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYP-ME-igp">
+                                <rect key="frame" x="20" y="94" width="374" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="boN-7P-M3G">
+                                        <rect key="frame" x="10" y="10" width="354" height="180"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vyd-l4-vII">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOKSHELF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfR-Dh-dhl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="329" height="20"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                                        <color key="textColor" name="AccentColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGA-xE-kDP">
+                                                        <rect key="frame" x="334" y="0.99999999999999822" width="20" height="18.666666666666664"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="2ot-Tc-DZb"/>
+                                                            <constraint firstAttribute="height" constant="20" id="c6Z-dA-lJK"/>
+                                                        </constraints>
+                                                        <color key="tintColor" name="AccentColor"/>
+                                                        <state key="normal" backgroundImage="info.circle" catalog="system"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5dQ-QG-xfB">
+                                                <rect key="frame" x="0.0" y="25" width="354" height="155"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoForSettings" translatesAutoresizingMaskIntoConstraints="NO" id="7dc-mP-nKA">
+                                                        <rect key="frame" x="0.0" y="17.666666666666657" width="120" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="8ZF-YS-1sx"/>
+                                                            <constraint firstAttribute="width" constant="120" id="ol1-v7-2Pn"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDC-he-Lno">
+                                                        <rect key="frame" x="130" y="15.333333333333336" width="224" height="124.33333333333331"/>
+                                                        <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                        <color key="textColor" name="AccentColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="5dQ-QG-xfB" firstAttribute="leading" secondItem="boN-7P-M3G" secondAttribute="leading" id="1k6-hs-32a"/>
+                                            <constraint firstAttribute="trailing" secondItem="5dQ-QG-xfB" secondAttribute="trailing" id="5Qc-AY-d30"/>
+                                            <constraint firstAttribute="bottom" secondItem="5dQ-QG-xfB" secondAttribute="bottom" id="HJZ-j4-8uA"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="SettingsCard"/>
+                                <constraints>
+                                    <constraint firstItem="boN-7P-M3G" firstAttribute="leading" secondItem="eYP-ME-igp" secondAttribute="leading" constant="10" id="DYx-ds-aFj"/>
+                                    <constraint firstItem="boN-7P-M3G" firstAttribute="top" secondItem="eYP-ME-igp" secondAttribute="top" constant="10" id="RNi-OR-a8S"/>
+                                    <constraint firstAttribute="trailing" secondItem="boN-7P-M3G" secondAttribute="trailing" constant="10" id="SoZ-Wy-kZA"/>
+                                    <constraint firstAttribute="height" constant="200" id="Xvg-Na-uCz"/>
+                                    <constraint firstAttribute="bottom" secondItem="boN-7P-M3G" secondAttribute="bottom" constant="10" id="zmS-66-6kZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iD2-aE-Ndk"/>
+                        <color key="backgroundColor" name="AppUIColor"/>
+                        <constraints>
+                            <constraint firstItem="NZR-XY-18S" firstAttribute="centerX" secondItem="QoO-yI-tVH" secondAttribute="centerX" id="4w6-zK-c1K"/>
+                            <constraint firstItem="eYP-ME-igp" firstAttribute="leading" secondItem="iD2-aE-Ndk" secondAttribute="leading" constant="20" id="7ah-eV-x6P"/>
+                            <constraint firstItem="NZR-XY-18S" firstAttribute="bottom" secondItem="iD2-aE-Ndk" secondAttribute="bottom" id="G0Z-Tm-TTW"/>
+                            <constraint firstItem="iD2-aE-Ndk" firstAttribute="trailing" secondItem="eYP-ME-igp" secondAttribute="trailing" constant="20" id="NBZ-6K-ldK"/>
+                            <constraint firstItem="g6P-5E-pRC" firstAttribute="leading" secondItem="iD2-aE-Ndk" secondAttribute="leading" constant="20" id="O7H-P2-8B2"/>
+                            <constraint firstItem="eYP-ME-igp" firstAttribute="top" secondItem="g6P-5E-pRC" secondAttribute="bottom" constant="20" id="QGI-FU-MTD"/>
+                            <constraint firstItem="g6P-5E-pRC" firstAttribute="top" secondItem="iD2-aE-Ndk" secondAttribute="top" id="ybp-cw-qQB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IJe-jg-I0s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfe-Ga-MFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231.8840579710145" y="-318.08035714285711"/>
+        </scene>
         <!--Update ProfileVC-->
         <scene sceneID="wQG-Cy-QJ5">
             <objects>
@@ -703,7 +811,7 @@ book friends</string>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PXK-tg-npY">
-                                <rect key="frame" x="20" y="314" width="374" height="190"/>
+                                <rect key="frame" x="20" y="314" width="374" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KqD-kt-ZHl">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -723,11 +831,6 @@ book friends</string>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                        <color key="value" name="PrimaryWhite"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -749,37 +852,16 @@ book friends</string>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                        <color key="value" name="PrimaryWhite"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpT-Cz-dea" customClass="BorderedButton" customModule="BookSelf" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="140" width="374" height="50"/>
-                                        <color key="backgroundColor" red="0.62352941179999999" green="0.25490196079999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Rdz-gL-ffX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                        <state key="normal" title="Done" backgroundImage="SignUpBtn">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="updateBtnPressed:" destination="H8Z-gX-zRc" eventType="touchUpInside" id="pzg-V4-5Zl"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="KqD-kt-ZHl" firstAttribute="top" secondItem="PXK-tg-npY" secondAttribute="top" id="3DT-sx-xFk"/>
-                                    <constraint firstAttribute="trailing" secondItem="fpT-Cz-dea" secondAttribute="trailing" id="TtC-Z1-gnw"/>
                                     <constraint firstItem="KqD-kt-ZHl" firstAttribute="leading" secondItem="PXK-tg-npY" secondAttribute="leading" id="ZBH-vZ-E0u"/>
                                     <constraint firstItem="qcV-L8-DeA" firstAttribute="leading" secondItem="PXK-tg-npY" secondAttribute="leading" id="a7d-4g-PF3"/>
                                     <constraint firstAttribute="trailing" secondItem="qcV-L8-DeA" secondAttribute="trailing" id="cVs-Va-1gl"/>
                                     <constraint firstAttribute="trailing" secondItem="KqD-kt-ZHl" secondAttribute="trailing" id="i1T-h1-KZl"/>
-                                    <constraint firstItem="fpT-Cz-dea" firstAttribute="leading" secondItem="PXK-tg-npY" secondAttribute="leading" id="pLY-gH-jov"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Profile Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lM-j2-Ucf">
@@ -788,7 +870,7 @@ book friends</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7j-dQ-aYy">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7j-dQ-aYy">
                                 <rect key="frame" x="364" y="150" width="30" height="30"/>
                                 <color key="backgroundColor" name="PrimaryWhite"/>
                                 <constraints>
@@ -797,6 +879,9 @@ book friends</string>
                                 </constraints>
                                 <color key="tintColor" red="0.16078431369999999" green="0.19215686269999999" blue="0.27058823529999998" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" image="camera.viewfinder" catalog="system"/>
+                                <connections>
+                                    <action selector="imageSelectWithSender:" destination="H8Z-gX-zRc" eventType="touchUpInside" id="C0v-sV-rby"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dU-8s-nfd">
                                 <rect key="frame" x="232" y="204" width="30" height="30"/>
@@ -807,6 +892,9 @@ book friends</string>
                                 </constraints>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="imageSelectWithSender:" destination="H8Z-gX-zRc" eventType="touchUpInside" id="qci-fa-dFe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-Hb-Qp2">
                                 <rect key="frame" x="20" y="44" width="30" height="30"/>
@@ -823,13 +911,16 @@ book friends</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXC-5Q-jF5">
                                 <rect key="frame" x="349" y="44" width="45" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="owq-y7-jz4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="3Hs-yh-yls"/>
                                     <constraint firstAttribute="height" constant="30" id="q78-Zh-Jeg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" name="PrimaryWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneBtnPressed:" destination="H8Z-gX-zRc" eventType="touchUpInside" id="3Kf-Mo-Poj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MTN-75-YI8"/>
@@ -859,10 +950,10 @@ book friends</string>
                     <navigationItem key="navigationItem" id="vm2-qg-2Ks"/>
                     <connections>
                         <outlet property="BannerAddBtn" destination="c7j-dQ-aYy" id="Emr-6R-I8F"/>
+                        <outlet property="bannerImageView" destination="9iW-Vy-APj" id="fxb-qm-Mvn"/>
                         <outlet property="bioTextField" destination="Zn1-0B-AHX" id="quc-lZ-HLR"/>
                         <outlet property="profileImageAddBtn" destination="0dU-8s-nfd" id="uxN-nI-QPJ"/>
                         <outlet property="profileImageView" destination="xJI-Mk-GbW" id="jbZ-ba-B6x"/>
-                        <outlet property="updateBtn" destination="fpT-Cz-dea" id="kQq-yR-nJE"/>
                         <outlet property="usernameTextField" destination="VTz-1o-ncY" id="bdX-pp-sw2"/>
                         <segue destination="1bR-xu-JBX" kind="presentation" identifier="toMain" modalPresentationStyle="fullScreen" id="afr-qg-ola"/>
                     </connections>
@@ -918,15 +1009,15 @@ book friends</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IqU-6N-Flg">
                                                 <rect key="frame" x="0.0" y="225" width="354" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58W-1W-9pO" customClass="BorderedButton" customModule="BookSelf" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58W-1W-9pO" customClass="BorderedButton" customModule="BookSelf" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="50"/>
                                                         <color key="backgroundColor" name="PrimaryWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="acl-jB-bCZ"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                                        <state key="normal" title="Pick Image">
-                                                            <color key="titleColor" name="PrimaryRed"/>
+                                                        <color key="tintColor" name="PrimaryDark"/>
+                                                        <state key="normal" title="Pick Image" image="camera.viewfinder" catalog="system">
+                                                            <color key="titleColor" name="PrimaryDark"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="pickImageBtnPressed:" destination="zq8-ph-vC0" eventType="touchUpInside" id="W6f-rU-Fk7"/>
@@ -1293,7 +1384,7 @@ book friends</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="afr-qg-ola"/>
-        <segue reference="qDB-Wk-u7s"/>
+        <segue reference="hwW-PF-6Ng"/>
         <segue reference="Cwp-46-Qdx"/>
         <segue reference="IOR-i0-xyb"/>
         <segue reference="wlT-w6-zxr"/>
@@ -1302,6 +1393,7 @@ book friends</string>
         <image name="CancelBtn" width="20" height="20"/>
         <image name="Login ScreenBG" width="375" height="812"/>
         <image name="Logo" width="250" height="200"/>
+        <image name="LogoForSettings" width="1024" height="1024"/>
         <image name="PPPlaceholder" width="200" height="200"/>
         <image name="SignUpBtn" width="317" height="50"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
@@ -1312,6 +1404,7 @@ book friends</string>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="imagePlaceholder" width="375" height="735"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
@@ -1325,6 +1418,9 @@ book friends</string>
         <namedColor name="CreatePostUIColor">
             <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="PrimaryDark">
+            <color red="0.16078431372549021" green="0.19215686274509805" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="PrimaryNavBar">
             <color red="0.9137254901960784" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1333,6 +1429,9 @@ book friends</string>
         </namedColor>
         <namedColor name="PrimaryWhite">
             <color red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SettingsCard">
+            <color red="0.79607843137254897" green="0.78823529411764703" blue="0.78823529411764703" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextFieldBackgroundColor">
             <color red="0.79607843137254897" green="0.78823529411764703" blue="0.78823529411764703" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>

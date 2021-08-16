@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "ProfileCard.png",
+      "filename" : "Logo 1025.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ProfileCard@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ProfileCard@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
